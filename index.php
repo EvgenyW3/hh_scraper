@@ -21,7 +21,16 @@ echo '<style type="text/css">
 		    background-repeat-x: no-repeat;
 		    background-repeat-y: no-repeat;
 		    line-height: 48px;
-			background-color: rgba(0,0,0,0.2);
+			background-color: #e7e9ec;
+		}
+		.custom-laureaElement-LaureaAccordionHeading span {
+   			color: black !important;
+		}
+		.wrap h2{
+			text-align: left !important;
+		}
+		.wrap > div > p{
+			text-align: left !important;
 		}
       </style>';
 

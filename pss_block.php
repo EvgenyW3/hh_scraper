@@ -1760,9 +1760,18 @@ echo '<style type="text/css">
 		    font-size: 14px;
 		    font-weight: bold;
 		}
-               .custom-laureaTable-default {
-                    border: 1px solid #c6c6c6;
-                }
+        .custom-laureaElement-LaureaAccordionHeading span {
+   			color: black !important;
+		}
+        .custom-laureaTable-default {
+            border: 1px solid #c6c6c6;
+        }
+		.wrap h2{
+			text-align: left !important;
+		}
+		.wrap > div > p{
+			text-align: left !important;
+		}
       </style>';
 
 foreach($elem->find('h2[class=custom-laureaElement-LaureaAccordionHeading]') as $key => $headings) {
@@ -1771,7 +1780,7 @@ foreach($elem->find('h2[class=custom-laureaElement-LaureaAccordionHeading]') as 
 	echo '<script>
 		$( document ).ready(function() {
 			$("body").on("click", "#trigger_'.$key.'", function(){
-				$("#accordion_'.$key.'").toggle("fast");
+				$("#accordion_'.$key.'").toggle();
 			});
 		});
 		</script>';
