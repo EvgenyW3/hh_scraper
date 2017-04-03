@@ -1742,6 +1742,14 @@ $html = file_get_html('https://www.laurea.fi/opiskelu-ja-hakeminen/opintojen-kul
 $elem = $html->find('div[id=accordion-field]', 0);
 
 echo '<script src="https://code.jquery.com/jquery-1.10.2.js"></script>';
+echo '<script>
+		$( document ).ready(function() {
+			var $divElement = $("#footer");
+			var html = $divElement.html();
+			$divElement.remove();
+            $("#pageWrapper").append("<div id=\"footer\">"+html+"</div>");
+		});
+	  </script>';
 echo '<style type="text/css">
 	    .custom-laureaTable-0 {
 	            display: none;
@@ -1760,12 +1768,12 @@ echo '<style type="text/css">
 		    font-size: 14px;
 		    font-weight: bold;
 		}
-        .custom-laureaElement-LaureaAccordionHeading span {
+                .custom-laureaElement-LaureaAccordionHeading span {
    			color: black !important;
 		}
-        .custom-laureaTable-default {
-            border: 1px solid #c6c6c6;
-        }
+               .custom-laureaTable-default {
+                    border: 1px solid #c6c6c6;
+                }
 		.wrap h2{
 			text-align: left !important;
 		}
